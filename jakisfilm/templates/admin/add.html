@@ -1,0 +1,15 @@
+{% extends 'admin/base.html' %}
+{% set active_page = 'add' %}
+{% block content %}
+  <form method="post">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input name="title" id="title" value="{{ request.form['title'] }}" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="youtube_id">Youtube ID</label>
+      <textarea name="youtube_id" id="youtube_id" class="form-control">{{ request.form['youtube_id'] }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+{% endblock %}

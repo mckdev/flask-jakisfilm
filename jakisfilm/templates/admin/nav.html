@@ -1,0 +1,13 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('player.index') }}"><i class="far fa-play-circle"></i></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if active_page == 'index' %}active{% endif %}" href="{{ url_for('admin.index') }}">Movies</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if active_page == 'add' %}active{% endif %}" href="{{ url_for('admin.add') }}">
+        <i class="fas fa-plus"></i>
+        </a>
+    </li>
+</ul>
