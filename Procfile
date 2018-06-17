@@ -1,1 +1,1 @@
-web: gunicorn jakisfilm:jakisfilm
+web: gunicorn jakisfilm.wsgi:app
