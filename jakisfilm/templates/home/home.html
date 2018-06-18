@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     {% include 'header_scripts.html' %}
-    
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
 
     <title>
         {% if page_title %}
@@ -18,9 +18,17 @@
     </title>
   </head>
   <body>
-    <div class="container">
-        <div class="play-button text-center mt-5">
-            <a style="font-family: 'Great Vibes', cursive; border-radius: 4em; padding: 2em;" class="btn btn-success" href="{{ url_for('player.index') }}"><span class="display-4"><i class="far fa-play-circle"></i> Puść jakiś film...</span></a>
+    <div class="container" style="font-family: 'Krona One', sans-serif;">
+        <div class="container text-center">
+            <div class="display-1">JakiśFilm.pl</div>
+            <div class="h3">Nie wiesz co puścić?</div>
+            <div class="h2">Nie chce Ci się szukać?</div>
+            <div class="h1">Pomożemy!</div>
+            <div class="play-button mt-5 mb-3">
+                <a style="border-radius: 4em; padding: 2em;" class="btn btn-success" href="{{ url_for('player.index') }}"><span class="h3"><i class="far fa-play-circle"></i> Puść jakiś film...</span></a>
+            </div>
+            <p>Ilośc filmów w bazie: <strong>{{ movie_count }}</strong></p>
+            <p class="text-muted">Tylko filmy polskie lub z lektorem!</p>
         </div>
       {% include 'footer_scripts.html' %}
     </div>
